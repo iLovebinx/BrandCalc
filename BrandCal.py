@@ -10,7 +10,7 @@ print ("██████╦╝██║░░██║██║░░██║
 print ("╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░")
 print ("by brandon")
 
-print (                                                                                )
+print ( 'use the corresponding number as the operator identifier, ex if you want to use the quadratics function, type "4"')
 
 
 
@@ -20,8 +20,10 @@ print (                                                                         
 
 OriginQ = input (
     "1 : Basic Arithmitic\n" 
-    "2 : Complex Math\n"
+    "2 : Statistics\n"
     "3 : Collatz Checker\n"
+    "4 : Quadratics"
+
 
 )
 
@@ -162,6 +164,30 @@ def collatz ():
 
      print ("better luck next time this number had a total of " + str(iteration) + " iterations before stoping to 4, 2, 1")
 
+
+def quadratics ():
+     av = int(input ("value of a"))
+     bv = int(input ("value of b"))
+     cv = int(input ("value of c"))
+
+
+     def quadratic_calculate_negative (a, b, c):
+          return (-b - math.sqrt(b**2 - 4*a*c)) / (2*a)
+          
+     def quadratic_calculate_positive (a, b, c):
+          return (-b +math.sqrt(b**2 - 4*a*c)) / (2*a)
+     
+     resultNeg = quadratic_calculate_negative (av, bv, cv)
+     resultPos = quadratic_calculate_positive (av, bv, cv)
+
+     print (float((abs(resultNeg))))
+     print ('or')
+     print (float((abs(resultPos))))
+
+
+
+
+
 if OriginQ == ("1" or "BasicMath" or "basic math"):
      BasicMath ()
 
@@ -171,6 +197,10 @@ elif OriginQ == ("2" or "statisitics" or "stat"):
 
 elif OriginQ == ("3" or "Collatz Checker" or "collatz checker"):
      collatz ()
+
+elif OriginQ == ("4" or "quadratics" ):
+     quadratics ()
+
 
 
 
